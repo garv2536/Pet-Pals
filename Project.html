@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Pals | Adopt, Care & Love</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fffdfc;
+      color: #333;
+    }
+
+    header {
+      background-color: #3e3a36;
+      padding: 20px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f7b733;
+    }
+
+    section {
+      padding: 80px 60px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 3px #000;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .hero a {
+      padding: 12px 25px;
+      background-color: #f7b733;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: background-color 0.3s;
+    }
+
+    .hero a:hover {
+      background-color: #e39e22;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 40px;
+      text-align: center;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+    }
+
+    .card p {
+      padding: 0 10px 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .form-section form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-section input,
+    .form-section textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .form-section button {
+      padding: 12px;
+      background-color: #3e3a36;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form-section button:hover {
+      background-color: #2e2a26;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      margin: 10px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    footer {
+      background-color: #3e3a36;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐾 Pet Pals</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#adopt">Adopt</a>
+      <a href="#products">Products</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#tips">Care</a>
+      <a href="#stories">Stories</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Find Your Forever Friend</h2>
+    <a href="#adopt">Explore Adoptions</a>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Pet Pals</h2>
+    <p style="max-width: 700px; margin: auto; text-align: center;">Pet Pals is a non-profit platform dedicated to helping animals find loving homes. We provide resources for adopting, caring, and loving your furry friends.</p>
+  </section>
+
+  <section id="adopt">
+    <h2 class="section-title">Pets Available for Adoption</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1603314585442-ee3b3c16fbcf?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=joe-cleary-klH-f7mw2Ws-unsplash.jpg" alt="Kitten">
+        <h3>Whiskers</h3>
+        <p>3-month-old playful kitten. Vaccinated and ready to go home.</p>
+      </div>
+      <div class="card">
+        <img src="https://placedog.net/300/200?id=1" alt="Puppy">
+        <h3>Bruno</h3>
+        <p>Friendly 2-year-old Labrador looking for a warm home.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2 class="section-title">Pet Care Products</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1700709678035-b6606373aa52?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=taitopia-render-y-fZQRwjLVw-unsplash.jpg" alt="Pet Shampoo">
+        <h3>Pet Shampoo</h3>
+        <p>Natural ingredients for healthy fur & skin.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1601758003630-df669e4e825a?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=chewy-klJFfITeEJI-unsplash.jpg" alt="Chew Toy">
+        <h3>Chew Toy</h3>
+        <p>Durable and safe for heavy chewers.</p>
+      </div>
+    </div>
+  </section>
+<!-- Simple Image Carousel Start -->
+<div style="width:400px; margin:30px auto; text-align:center;">
+  <img id="carousel-img" src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d" alt="Pet 1" width="400" height="250" style="border-radius:10px; border:2px solid #ccc;">
+  <br>
+  <button onclick="prevImg()">Previous</button>
+  <button onclick="nextImg()">Next</button>
+</div>
+<script>
+  var images = [
+    
+    "https://images.unsplash.com/photo-1548767797-d8c844163c4c?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=bonnie-kittle-MUcxe_wDurE-unsplash.jpg",
+    "https://images.unsplash.com/photo-1597357821540-3dc1852ef417?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=mana5280-mhXop68UAGk-unsplash.jpg",
+    "https://images.unsplash.com/photo-1570018144715-43110363d70a?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=the-lucky-neko-uePn9YCTCY0-unsplash.jpg",
+    "https://images.unsplash.com/photo-1507568237455-03228e5ddb7e?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=matthew-larkin-bBHT2sePOnY-unsplash.jpg",
+     "https://images.unsplash.com/photo-1447684808650-354ae64db5b8?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=jairo-alzate-sssxyuZape8-unsplash.jpg",
+    "https://images.unsplash.com/photo-1530667912788-f976e8ee0bd5?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=austin-kirk-QZenflkkwt0-unsplash.jpg",
+    "https://images.unsplash.com/photo-1542736705-53f0131d1e98?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=anton-kraev-TuU5tODcrzU-unsplash.jpg",
+    "https://images.unsplash.com/photo-1445499348736-29b6cdfc03b9?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=freddie-marriage-iYQC9xWMvw4-unsplash.jpg",    
+    "https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sergey-semin-Y0WXj3xqJz0-unsplash.jpg",
+    "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=andriyko-podilnyk-RCfi7vgJjUY-unsplash.jpg",
+    "https://images.unsplash.com/photo-1525253013412-55c1a69a5738?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=jametlene-reskp-fliwkBbS7oM-unsplash.jpg",
+    "https://images.unsplash.com/photo-1591160690555-5debfba289f0?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=bill-stephan-9LkqymZFLrE-unsplash.jpg",
+  ];
+  var current = 0;
+  function showImg(idx) {
+    document.getElementById('carousel-img').src = images[idx];
+  }
+  function prevImg() {
+    current = (current - 1 + images.length) % images.length;
+    showImg(current);
+  }
+  function nextImg() {
+    current = (current + 1) % images.length;
+    showImg(current);
+  }
+</script>
+  <section id="gallery">
+    <h2 class="section-title">Gallery of Baby Animals</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=bonnie-kittle-MUcxe_wDurE-unsplash.jpg">
+      <img src="https://images.unsplash.com/photo-1597357821540-3dc1852ef417?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=mana5280-mhXop68UAGk-unsplash.jpg">
+      <img src="https://images.unsplash.com/photo-1570018144715-43110363d70a?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=the-lucky-neko-uePn9YCTCY0-unsplash.jpg">
+      <img src="https://images.unsplash.com/photo-1507568237455-03228e5ddb7e?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=matthew-larkin-bBHT2sePOnY-unsplash.jpg">
+      <img src="https://images.unsplash.com/photo-1542736705-53f0131d1e98?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=anton-kraev-TuU5tODcrzU-unsplash.jpg">
+      <img src="https://images.unsplash.com/photo-1445499348736-29b6cdfc03b9?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=freddie-marriage-iYQC9xWMvw4-unsplash.jpg">
+      <img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sergey-semin-Y0WXj3xqJz0-unsplash.jpg">
+      <img src="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=andriyko-podilnyk-RCfi7vgJjUY-unsplash.jpg">
+      <img src="https://images.unsplash.com/photo-1525253013412-55c1a69a5738?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=jametlene-reskp-fliwkBbS7oM-unsplash.jpg">
+      <img src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=bill-stephan-9LkqymZFLrE-unsplash.jpg">
+      <img src="https://images.unsplash.com/photo-1447684808650-354ae64db5b8?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=jairo-alzate-sssxyuZape8-unsplash.jpg">
+      <img src="https://images.unsplash.com/photo-1530667912788-f976e8ee0bd5?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=austin-kirk-QZenflkkwt0-unsplash.jpg">
+      <img src="https://images.unsplash.com/photo-1530667912788-f976e8ee0bd5?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=austin-kirk-QZenflkkwt0-unsplash.jpg">
+      <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=berkay-gumustekin-ngqyo2AYYnE-unsplash.jpg">
+      <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=t-r-photography-TzjMd7i5WQI-unsplash.jpg">
+    </div>
+  </section>
+
+  <section id="tips">
+    <h2 class="section-title">Pet Care Tips</h2>
+    <p style="max-width: 700px; margin: auto; text-align: center;">Make sure to feed your pet high-quality food, provide regular vet visits, and give them enough love and playtime every day.</p>
+  </section>
+
+  <section id="stories">
+    <h2 class="section-title">Happy Tails</h2>
+    <p style="max-width: 700px; margin: auto; text-align: center;">"Adopting Max was the best decision ever! He's full of joy and our home is now brighter." – Maya & Max</p>
+  </section>
+
+  <section id="contact" class="form-section">
+    <h2 class="section-title">Get in Touch</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pet Pals. All rights reserved.</p>
+    <p><a href="#top" style="color: #f7b733; text-decoration: none;">Go to Top</a></p>
+  </footer>
+</body>
+</html>
+
+
